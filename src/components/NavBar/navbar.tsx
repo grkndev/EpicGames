@@ -42,7 +42,7 @@ export default function NavBar() {
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <span>John Doe</span>
+          <span>grkndev</span>
         </Button>
       </div>
     </div>

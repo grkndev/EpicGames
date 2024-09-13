@@ -13,80 +13,81 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { Badge } from "../ui/badge";
 
-const components: { title: string; href: string; description: string }[] = [
+const components: { title: string; href: string; }[] = [
   {
-    title: "Alert Dialog",
+    title: "My Library",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
-    title: "Hover Card",
+    title: "Downloading",
     href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
   },
   {
-    title: "Progress",
+    title: "DLC's",
     href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+   
   },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
+ 
 ];
 
 export function Navigation() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem className="">
+        <NavigationMenuItem >
           <NavigationMenuTrigger className="hover:bg-transparent hover:text-white data-[state=open]:bg-transparent data-[state=open]:text-white">
             Discover
           </NavigationMenuTrigger>
-          <NavigationMenuContent  className="bg-woodsmoke-900 text-white">
+          <NavigationMenuContent className="bg-[#202024] text-white">
             <ul className=" grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md 
+                    bg-black/60 p-6 no-underline outline-none focus:shadow-md"
+                    style={{
+                      backgroundImage: `url('https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/71d4d17edcd49703a5ea446cc0e588e6.jpg')`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundBlendMode: "overlay",
+                    }}
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
+                      Grand Theft Auto VI
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
+                    <Badge
+                      className="w-fit text-[10px] px-2"
+                      variant={"secondary"}
+                    >
+                      Promoted
+                    </Badge>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
+              <ListItem
+                className="hover:bg-woodsmoke-800 hover:text-white"
+                href="/docs"
+                title="New related games"
+              >
+                How about a new adventure?
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
+              <ListItem
+                className="hover:bg-woodsmoke-800 hover:text-white"
+                href="/docs/installation"
+                title="Most Popular"
+              >
+                The most popular games on the Epic Games Store.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem
+                className="hover:bg-woodsmoke-800 hover:text-white"
+                href="/docs/primitives/typography"
+                title="Top Sellers"
+              >
+                The top selling games on the Epic Games Store.
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -95,15 +96,15 @@ export function Navigation() {
           <NavigationMenuTrigger className="hover:bg-transparent hover:text-white data-[state=open]:bg-transparent data-[state=open]:text-white">
             Library
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-woodsmoke-900 text-white">
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+          <NavigationMenuContent className="bg-[#202024] text-white border-none">
+            <ul className="grid w-[375px] gap-3 p-4 ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
                   href={component.href}
                 >
-                  {component.description}
+                 
                 </ListItem>
               ))}
             </ul>

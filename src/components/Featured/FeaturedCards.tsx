@@ -1,6 +1,6 @@
 export default function FeaturedCards() {
   return (
-    <div className="flex flex-col justify-between py-4 space-y-4 w-1/3">
+    <div className="flex flex-col justify-between py-4 space-y-4 w-1/4">
       {Array.from({ length: 5 }).map((_, index) => (
         <div
           key={index}
