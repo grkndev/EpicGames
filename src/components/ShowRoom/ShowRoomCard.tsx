@@ -186,6 +186,7 @@ export default function ShowRoomCard() {
             <div className="flex space-x-4 w-1/3 items-center">
               {games[gameIndex].images.map((image, index) => (
                 <img
+                key={index}
                   src={image}
                   alt=""
                   className="h-16 aspect-video object-cover border-2 border-woodsmoke-500 rounded-xl shadow-2xl shadow-woodsmoke-700 hover:scale-125 transition-all duration-300"

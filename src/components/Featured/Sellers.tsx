@@ -1,5 +1,4 @@
-import { Separator } from "@/components/ui/separator";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 export default function Sellers() {
   return (
     <div className="grid grid-cols-3 gap-8 px-8 pt-16">
