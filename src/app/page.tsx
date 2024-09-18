@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="">
       <NavBar />
-      <div className="p-6 flex justify-between w-full space-x-8">
+      <div className="p-6 flex justify-between w-full space-x-8  border-b border-woodsmoke-900 border-primary">
         <ShowRoomCard />
         <FeaturedCards />
       </div>

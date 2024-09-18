@@ -88,12 +88,12 @@ export default function ShowRoomCard() {
 
   return (
     <div
-      className="w-4/5 h-[720px] rounded-3xl bg-black overflow-hidden relative cursor-pointer"
+      className="w-4/5 h-[720px] rounded-3xl   bg-black overflow-hidden relative cursor-pointer"
       onClick={handleCardClick}
     >
       {/* Background image */}
       <div
-        className={`absolute inset-0 transition-opacity duration-1000 ${
+        className={`absolute w-full inset-0 transition-opacity duration-1000 ${
           isVideoReady && !isVideoEnded ? "opacity-0" : "opacity-100"
         }`}
         style={{
@@ -112,6 +112,7 @@ export default function ShowRoomCard() {
           isVideoReady && !isVideoEnded ? "opacity-100" : "opacity-0"
         }`}
       >
+        
         <ReactPlayer
           url={games[gameIndex].video}
           playing={isVideoReady && !isVideoEnded}

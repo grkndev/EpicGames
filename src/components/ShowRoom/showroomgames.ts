@@ -22,7 +22,7 @@ const games = [
   {
     id: 2,
     logo: "https://cdn2.steamgriddb.com/logo/69cbae47f1fe34d1f5035e6256893528.png",
-    title: "God of War Ragnarök",
+    title: "God of War: Ragnarök",
     thumbnail:
       "https://cdn1.epicgames.com/spt-assets/edaff839f0734d16bc89d2ddb1dc9339/steel-magnolia-15owu.jpg",
     description:

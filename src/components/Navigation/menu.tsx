@@ -40,8 +40,8 @@ export function Navigation() {
           <NavigationMenuTrigger className="hover:bg-transparent hover:text-white data-[state=open]:bg-transparent data-[state=open]:text-white">
             Discover
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-[#202024] text-white">
-            <ul className=" grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+          <NavigationMenuContent className="bg-[#202024] text-white border-none ring-0">
+            <ul className="border-none grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
